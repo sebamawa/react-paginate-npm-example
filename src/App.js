@@ -1,22 +1,35 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+// import { useState, useEffect } from 'react';
+
+import PaginatedItems from './components/PaginatedItems';
 
 function App() {
+
+  // const [customers, setCustomers] = useState([]);
+  // const [currentPage, setCurrentPage] = useState(1);
+
+  // useEffect(() => {
+
+  //   try {
+  //     const fetchCustomers = async () => {
+  //       const response = await fetch(`http://192.168.1.5:8080/KBGymTemplateJavaMySQL/CustomersAPI/List?cust_active=true&page_number=${currentPage}&page_size=3`);
+  //       const json = await response.json();
+  //       console.log(json);
+  //       setCustomers(json.SDTCustomers);
+  //     }
+  //     fetchCustomers();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }, [currentPage]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <PaginatedItems 
+          itemsPerPage={4} 
+        />
       </header>
     </div>
   );
